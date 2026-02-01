@@ -7,12 +7,12 @@ const scheduleData = [
         icon: Calendar,
     },
     {
-        day: "Sábados",
+        day: "Sábado",
         hours: "09:00 a 20:00",
         icon: Calendar,
     },
     {
-        day: "Domingos",
+        day: "Domingo",
         hours: "09:00 a 13:00",
         icon: Calendar,
     },
@@ -28,7 +28,7 @@ export default function ScheduleSection() {
                         <p className="text-[#FACC15] text-sm font-semibold tracking-wider">HORARIOS</p>
                         <Clock className="w-5 h-5 text-[#FACC15]" />
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white uppercase italic">
                         NUESTROS <span className="text-[#8B5CF6]">HORARIOS</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">

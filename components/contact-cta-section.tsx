@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Zap, MessageCircle } from "lucide-react"
 
@@ -26,22 +26,16 @@ export default function ContactCTASection() {
                             ¿Tenés alguna pregunta? ¡Estamos acá para ayudarte! Tu mejor versión empieza hoy.
                         </p>
                         <div
-                            className="h-[360px] relative rounded-xl border border-[#2D2D2D] overflow-hidden group flex items-center justify-center"
+                            className="h-[360px] lg:h-[450px] relative rounded-xl border border-[#2D2D2D] overflow-hidden group flex items-center justify-center"
                         >
-                            <div
-                                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                style={{
-                                    backgroundImage: `url('/images/programs/personal-branded.png')`,
-                                }}
+                            <Image
+                                src="/images/contacto.webp"
+                                alt="Contacto Coach Energy"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                priority
                             />
-                            <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/30" />
-
-                            {/* Overlay Text Sign */}
-                            <div className="relative z-10 p-6 border-4 border-[#8B5CF6] bg-black/40 backdrop-blur-sm transform -rotate-3 transition-transform duration-300 group-hover:rotate-0 group-hover:scale-105">
-                                <h3 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]">
-                                    COACH <span className="text-[#FACC15] drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">ENERGY</span>
-                                </h3>
-                            </div>
+                            <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:bg-black/10" />
                         </div>
 
                         {/* Decorative elements */}

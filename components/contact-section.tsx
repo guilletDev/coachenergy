@@ -102,91 +102,85 @@ export default function ContactSection() {
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                   style={{
-                    backgroundImage: `url('/images/programs/personal-branded.png')`,
+                    backgroundImage: `url('/images/contacto.webp')`,
                   }}
                 />
                 <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/30" />
 
-                {/* Overlay Text Sign */}
-                <div className="relative z-10 p-6 border-4 border-[#8B5CF6] bg-black/40 backdrop-blur-sm transform -rotate-3 transition-transform duration-300 group-hover:rotate-0 group-hover:scale-105">
-                  <h3 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]">
-                    COACH <span className="text-[#FACC15] drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">ENERGY</span>
-                  </h3>
-                </div>
+
+
+                {/* Decorative elements */}
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#8B5CF6]/20 rounded-full blur-2xl" />
               </div>
 
-              {/* Decorative elements */}
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-[#8B5CF6]/20 rounded-full blur-2xl" />
-            </div>
-
-            {/* Right side - Contact Form */}
-            <div className="bg-[#1A1A1A] rounded-xl p-8 border border-[#2D2D2D] relative">
-              {showSuccessPopup && (
-                <div className="absolute -top-16 left-0 right-0 z-50 animate-in slide-in-from-top duration-300 lg:hidden">
-                  <div className="bg-[#8B5CF6] rounded-lg shadow-lg p-4 flex items-center gap-3 mx-4">
-                    <div className="w-6 h-6 bg-[#FACC15] rounded-full flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-black" />
+              {/* Right side - Contact Form */}
+              <div className="bg-[#1A1A1A] rounded-xl p-8 border border-[#2D2D2D] relative">
+                {showSuccessPopup && (
+                  <div className="absolute -top-16 left-0 right-0 z-50 animate-in slide-in-from-top duration-300 lg:hidden">
+                    <div className="bg-[#8B5CF6] rounded-lg shadow-lg p-4 flex items-center gap-3 mx-4">
+                      <div className="w-6 h-6 bg-[#FACC15] rounded-full flex items-center justify-center flex-shrink-0">
+                        <Check className="w-4 h-4 text-black" />
+                      </div>
+                      <span className="text-white font-medium">¡Gracias por tu mensaje!</span>
                     </div>
-                    <span className="text-white font-medium">¡Gracias por tu mensaje!</span>
                   </div>
-                </div>
-              )}
+                )}
 
-              <h3 className="text-2xl font-bold mb-2 text-center text-white">ENVIANOS UN MENSAJE</h3>
-              <p className="text-gray-400 text-center mb-6 text-sm">Tu próximo nivel empieza con un mensaje.</p>
+                <h3 className="text-2xl font-bold mb-2 text-center text-white">ENVIANOS UN MENSAJE</h3>
+                <p className="text-gray-400 text-center mb-6 text-sm">Tu próximo nivel empieza con un mensaje.</p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Nombre"
-                    className={`w-full px-4 py-3 bg-[#2D2D2D] border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-colors ${errors.name ? "border-red-500 focus:border-red-500" : "border-[#3D3D3D] focus:border-[#8B5CF6]"
-                      }`}
-                  />
-                  {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Nombre"
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-colors ${errors.name ? "border-red-500 focus:border-red-500" : "border-[#3D3D3D] focus:border-[#8B5CF6]"
+                        }`}
+                    />
+                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                  </div>
 
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                    className={`w-full px-4 py-3 bg-[#2D2D2D] border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-colors ${errors.email ? "border-red-500 focus:border-red-500" : "border-[#3D3D3D] focus:border-[#8B5CF6]"
-                      }`}
-                  />
-                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-                </div>
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email"
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-colors ${errors.email ? "border-red-500 focus:border-red-500" : "border-[#3D3D3D] focus:border-[#8B5CF6]"
+                        }`}
+                    />
+                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                  </div>
 
-                <div>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Mensaje"
-                    rows={5}
-                    className={`w-full px-4 py-3 bg-[#2D2D2D] border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-colors resize-none ${errors.message ? "border-red-500 focus:border-red-500" : "border-[#3D3D3D] focus:border-[#8B5CF6]"
-                      }`}
-                  />
-                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-                </div>
+                  <div>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Mensaje"
+                      rows={5}
+                      className={`w-full px-4 py-3 bg-[#2D2D2D] border rounded-lg text-white placeholder-gray-500 focus:outline-none transition-colors resize-none ${errors.message ? "border-red-500 focus:border-red-500" : "border-[#3D3D3D] focus:border-[#8B5CF6]"
+                        }`}
+                    />
+                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                  </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-[#FACC15] hover:bg-[#FDE047] text-black font-bold py-3 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                >
-                  <Zap className="w-4 h-4 mr-2" />
-                  {isSubmitting ? "ENVIANDO..." : "ENVIAR MENSAJE"}
-                </Button>
-              </form>
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#FACC15] hover:bg-[#FDE047] text-black font-bold py-3 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  >
+                    <Zap className="w-4 h-4 mr-2" />
+                    {isSubmitting ? "ENVIANDO..." : "ENVIAR MENSAJE"}
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
       </section>
 
       {showSuccessPopup && (

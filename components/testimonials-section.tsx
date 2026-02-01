@@ -13,28 +13,28 @@ export default function TestimonialsSection() {
       role: "Miembro Activo",
       rating: 5,
       text: "Excelente espacio para el entrenamiento en general, fresco, cómodo, variedad de elementos y buena disposición de sus entrenadores.",
-      image: "/images/testimonios/diego.webp",
+      color: "bg-blue-600",
     },
     {
       name: "Roberto Magno",
       role: "Miembro Activo",
       rating: 5,
       text: "El lugar y las maquinas impecables. Los instructores muy atentos. Buen precio",
-      image: "/images/testimonios/pablo.webp",
+      color: "bg-red-600",
     },
     {
       name: "Lucía Fernández",
       role: "Miembro Activo",
       rating: 5,
       text: "El ambiente es increíble, muy buena onda de la gente y los profes. Super recomendado para empezar a entrenar.",
-      image: "/images/testimonios/ana.webp",
+      color: "bg-emerald-600",
     },
     {
       name: "Sofía Martínez",
       role: "Miembro Activo",
       rating: 5,
       text: "Las clases grupales son lo más, muy divertidas y exigentes. Las instalaciones siempre limpias y ordenadas.",
-      image: "/images/testimonios/maria.webp",
+      color: "bg-orange-600",
     },
   ]
 
@@ -108,26 +108,25 @@ export default function TestimonialsSection() {
           {visibleTestimonials.map((testimonial, index) => (
             <div
               key={`${testimonial.name}-${index}`}
-              className="bg-[#1A1A1A] rounded-xl p-4 md:p-6 text-center border border-[#2D2D2D] hover:border-[#8B5CF6]/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-[#1A1A1A] rounded-xl p-6 text-center border border-[#2D2D2D] hover:border-[#8B5CF6]/50 transition-all duration-300 hover:transform hover:scale-105 flex flex-col items-center h-full"
             >
-              <div
-                className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto mb-3 md:mb-4 bg-cover bg-center border-2 border-[#8B5CF6]"
-                style={{
-                  backgroundImage: `url('${testimonial.image}')`,
-                }}
-              />
-              <h3 className="font-bold text-base md:text-lg mb-1 text-white">
+              {/* Generic Avatar */}
+              <div className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-white shadow-lg ${testimonial.color}`}>
+                {testimonial.name.charAt(0)}
+              </div>
+
+              <h3 className="font-bold text-lg mb-1 text-white">
                 {testimonial.name}
               </h3>
               <p className="text-xs text-[#FACC15] mb-2 font-medium uppercase tracking-wider">{testimonial.role}</p>
 
-              <div className="flex justify-center gap-1 mb-3 md:mb-4">
+              <div className="flex justify-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 md:w-4 md:h-4 fill-[#FACC15] text-[#FACC15]" />
+                  <Star key={i} className="w-4 h-4 fill-[#FACC15] text-[#FACC15]" />
                 ))}
               </div>
 
-              <p className="text-gray-400 text-xs md:text-sm leading-relaxed">&quot;{testimonial.text}&quot;</p>
+              <p className="text-gray-400 text-sm leading-relaxed italic flex-grow">&quot;{testimonial.text}&quot;</p>
             </div>
           ))}
         </div>

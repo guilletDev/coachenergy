@@ -31,9 +31,15 @@ const facilities = [
   },
   {
     id: 5,
-    title: "Vestuarios",
-    description: "Casilleros seguros y duchas con agua caliente para tu comodidad.",
+    title: "Casilleros",
+    description: "Casilleros seguros y limpios para guardar tus pertenencias.",
     image: "/images/programs/casilleros.webp",
+  },
+  {
+    id: 6,
+    title: "Bicicletas",
+    description: "Bicicletas para hacer cardio en buen estado.",
+    image: "/images/programs/bicicletas.webp",
   },
 ]
 
