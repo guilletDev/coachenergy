@@ -1,9 +1,29 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap } from "lucide-react"
+import { Zap, Dumbbell, Activity, User } from "lucide-react"
 
 export default function ProgramsSection() {
+  const programs = [
+    {
+      title: "Entrenamiento de Fuerza",
+      description: "Desarrolla masa muscular y fuerza con equipamiento profesional",
+      image: "/images/programs/strength-branded.png",
+      icon: Dumbbell,
+    },
+    {
+      title: "Entrenamiento Funcional",
+      description: "Mejora movilidad, equilibrio y flexibilidad para la vida diaria",
+      image: "/images/programs/functional-branded.png",
+      icon: Activity,
+    },
+    {
+      title: "Entrenamiento Personal",
+      description: "Planes personalizados 1 a 1 con coaches certificados",
+      image: "/images/programs/personal-branded.png",
+      icon: User,
+    },
+  ]
+
   return (
     <section id="programs" className="py-20 px-6 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] animate-fade-in-up">
       <div className="max-w-7xl mx-auto">
@@ -24,79 +44,45 @@ export default function ProgramsSection() {
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {/* Strength Training */}
-          <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
-            <div
-              className="h-48 bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url('/images/programs/strength-branded.png')`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-            </div>
-            <div className="p-6 flex-1 flex flex-col -mt-6 relative z-10">
-              <h3 className="text-xl font-bold mb-2 text-white">Entrenamiento de Fuerza</h3>
-              <p className="text-gray-400 mb-4 flex-1">Desarrolla masa muscular y fuerza con equipamiento profesional</p>
-              <Button
-                variant="outline"
-                className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
-                onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20Entrenamiento%20de%20Fuerza", "_blank")}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {programs.map((program, index) => {
+            const IconComponent = program.icon
+            return (
+              <div
+                key={index}
+                className="group relative bg-[#1A1A1A] rounded-2xl overflow-hidden h-80 border border-[#2D2D2D] hover:border-[#8B5CF6]/50 transition-all duration-500 hover:shadow-xl hover:shadow-[#8B5CF6]/10"
               >
-                Saber Más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  style={{
+                    backgroundImage: `url('${program.image}')`,
+                  }}
+                />
 
-          {/* Functional Training */}
-          <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
-            <div
-              className="h-48 bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url('/images/programs/functional-branded.png')`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-            </div>
-            <div className="p-6 flex-1 flex flex-col -mt-6 relative z-10">
-              <h3 className="text-xl font-bold mb-2 text-white">Entrenamiento Funcional</h3>
-              <p className="text-gray-400 mb-4 flex-1">
-                Mejora movilidad, equilibrio y flexibilidad para la vida diaria
-              </p>
-              <Button
-                variant="outline"
-                className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
-                onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20Entrenamiento%20Funcional", "_blank")}
-              >
-                Saber Más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300" />
 
-          {/* Personal Coaching */}
-          <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
-            <div
-              className="h-48 bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url('/images/programs/personal-branded.png')`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-            </div>
-            <div className="p-6 flex-1 flex flex-col -mt-6 relative z-10">
-              <h3 className="text-xl font-bold mb-2 text-white">Entrenamiento Personal</h3>
-              <p className="text-gray-400 mb-4 flex-1">
-                Planes personalizados 1 a 1 con coaches certificados
-              </p>
-              <Button
-                variant="outline"
-                className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
-                onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20Entrenamiento%20Personal", "_blank")}
-              >
-                Saber Más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
+                {/* Icon Badge */}
+                <div className="absolute top-4 right-4 bg-[#8B5CF6]/90 backdrop-blur-sm p-2 rounded-xl group-hover:bg-[#FACC15] transition-colors duration-300">
+                  <IconComponent className="w-5 h-5 text-white group-hover:text-black transition-colors duration-300" />
+                </div>
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="h-1 w-8 bg-[#FACC15] rounded-full group-hover:w-12 transition-all duration-300" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 text-white group-hover:text-[#FACC15] transition-colors duration-300">
+                    {program.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+                    {program.description}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

@@ -89,7 +89,7 @@ export default function Navbar() {
 
         {/* Desktop Contact Button */}
         <Button
-          onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20contactarlos%20desde%20el%20menu", "_blank")}
+          onClick={() => scrollToSection("contact")}
           className="hidden md:flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8B5CF6]/25"
         >
           <Zap className="w-4 h-4" />

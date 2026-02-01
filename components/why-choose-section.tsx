@@ -100,10 +100,15 @@ export default function WhyChooseSection() {
             </div>
 
             <Button
-              onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quisiera%20mas%20informacion%20sobre%20ustedes", "_blank")}
+              onClick={() => {
+                const element = document.getElementById("facilities")
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
               className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold px-8 py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8B5CF6]/25">
               <Zap className="w-4 h-4 mr-2" />
-              Más Sobre Nosotros
+              Ver Instalaciones
             </Button>
           </div>
         </div>

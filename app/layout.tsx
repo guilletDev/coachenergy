@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Coach Energy" }],
   creator: "Coach Energy",
   publisher: "Coach Energy",
+  icons: {
+    icon: "/logo-coach-energy.png",
+    shortcut: "/logo-coach-energy.png",
+    apple: "/logo-coach-energy.png",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -81,12 +86,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
-        <link rel="apple-touch-icon" href="/favicon-192x192.png" />
+        <link rel="icon" type="image/png" href="/logo-coach-energy.png" />
+        <link rel="apple-touch-icon" href="/logo-coach-energy.png" />
         <meta name="theme-color" content="#8B5CF6" />
       </head>
       <body className="font-sans">

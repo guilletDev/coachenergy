@@ -50,11 +50,11 @@ export default function HeroSection() {
           Tu mejor versión empieza hoy
         </p>
         <Button
-          onClick={() => window.open("https://wa.me/5493872131333?text=¡Hola!%20👋%20Me%20gustaría%20saber%20más%20sobre%20Coach%20Energy%20y%20empezar%20a%20entrenar%20con%20ustedes.%20¿Me%20pueden%20dar%20info?", "_blank")}
+          onClick={() => scrollToSection("membership")}
           className="bg-[#FACC15] hover:bg-[#FDE047] text-black text-base md:text-lg px-10 py-6 md:px-12 md:py-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] font-bold opacity-0 animate-fade-in-slow uppercase tracking-wider"
           style={{ animationDelay: "1.5s" }}
         >
-          Únete Ahora
+          Unete ahora
         </Button>
       </div>
 
