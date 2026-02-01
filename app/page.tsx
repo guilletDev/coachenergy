@@ -7,7 +7,8 @@ import FacilitiesSection from "@/components/facilities-section"
 import MembershipSection from "@/components/membership-section"
 import ScheduleSection from "@/components/schedule-section"
 import TestimonialsSection from "@/components/testimonials-section"
-import ContactSection from "@/components/contact-section"
+// import ContactSection from "@/components/contact-section"
+import ContactCTASection from "@/components/contact-cta-section"
 import Footer from "@/components/footer"
 import FloatingButtons from "@/components/floating-buttons"
 import ScrollAnimations from "@/components/scroll-animations"
@@ -42,7 +43,8 @@ export default function HomePage() {
         <TestimonialsSection />
       </div>
       <div id="contact" className="scroll-animate">
-        <ContactSection />
+        {/* <ContactSection /> */}
+        <ContactCTASection />
       </div>
       <Footer />
       <FloatingButtons />
