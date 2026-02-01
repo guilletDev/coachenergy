@@ -33,7 +33,7 @@ export default function Footer() {
               Entrená con Energía. Viví con Fuerza.
             </p>
             <p className="text-[#FACC15] mb-6 text-sm">
-              Más que un gimnasio, una comunidad.
+              Tu transformación comienza aquí.
             </p>
 
             {/* Social Media Icons */}
@@ -147,7 +147,14 @@ export default function Footer() {
 
               <div>
                 <h4 className="text-[#8B5CF6] font-semibold mb-1">Llámanos</h4>
-                <p className="text-gray-400">+54 9 387 213-1333</p>
+                <a
+                  href="https://wa.me/5493872131333?text=¡Hola!%20👋%20Quiero%20saber%20más%20sobre%20Coach%20Energy."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#8B5CF6] transition-colors duration-200"
+                >
+                  +54 9 387 213-1333
+                </a>
               </div>
 
               <div>

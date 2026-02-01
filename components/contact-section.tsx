@@ -133,7 +133,7 @@ export default function ContactSection() {
               )}
 
               <h3 className="text-2xl font-bold mb-2 text-center text-white">ENVIANOS UN MENSAJE</h3>
-              <p className="text-gray-400 text-center mb-6 text-sm">Más que un gimnasio, una comunidad.</p>
+              <p className="text-gray-400 text-center mb-6 text-sm">Tu próximo nivel empieza con un mensaje.</p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>

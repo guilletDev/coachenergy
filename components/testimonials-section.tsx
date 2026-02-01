@@ -9,32 +9,32 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "María",
-      age: 29,
+      name: "Pichi Caratti",
+      role: "Miembro Activo",
       rating: 5,
-      text: "En 3 meses logré mis objetivos y me siento más fuerte que nunca. ¡Los coaches son increíbles!",
-      image: "/images/testimonios/maria.webp",
+      text: "Excelente espacio para el entrenamiento en general, fresco, cómodo, variedad de elementos y buena disposición de sus entrenadores.",
+      image: "/images/testimonios/diego.webp",
     },
     {
-      name: "Ana",
-      age: 25,
+      name: "Roberto Magno",
+      role: "Miembro Activo",
       rating: 5,
-      text: "Los coaches son fantásticos y la comunidad es súper motivadora. ¡Mi mejor decisión!",
-      image: "/images/testimonios/ana.webp",
-    },
-    {
-      name: "Pablo",
-      age: 35,
-      rating: 5,
-      text: "Unirme a Coach Energy cambió mi vida. El ambiente es único y los resultados se ven.",
+      text: "El lugar y las maquinas impecables. Los instructores muy atentos. Buen precio",
       image: "/images/testimonios/pablo.webp",
     },
     {
-      name: "Diego",
-      age: 31,
+      name: "Lucía Fernández",
+      role: "Miembro Activo",
       rating: 5,
-      text: "El entrenamiento personalizado es excelente. Alcancé mis metas más rápido de lo esperado.",
-      image: "/images/testimonios/diego.webp",
+      text: "El ambiente es increíble, muy buena onda de la gente y los profes. Super recomendado para empezar a entrenar.",
+      image: "/images/testimonios/ana.webp",
+    },
+    {
+      name: "Sofía Martínez",
+      role: "Miembro Activo",
+      rating: 5,
+      text: "Las clases grupales son lo más, muy divertidas y exigentes. Las instalaciones siempre limpias y ordenadas.",
+      image: "/images/testimonios/maria.webp",
     },
   ]
 
@@ -117,8 +117,9 @@ export default function TestimonialsSection() {
                 }}
               />
               <h3 className="font-bold text-base md:text-lg mb-1 text-white">
-                {testimonial.name}, {testimonial.age}
+                {testimonial.name}
               </h3>
+              <p className="text-xs text-[#FACC15] mb-2 font-medium uppercase tracking-wider">{testimonial.role}</p>
 
               <div className="flex justify-center gap-1 mb-3 md:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (

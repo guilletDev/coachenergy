@@ -51,7 +51,7 @@ export default function WhyChooseSection() {
               COACH <span className="text-[#8B5CF6]">ENERGY</span>?
             </h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-              Coach Energy no es solo un gimnasio — es una comunidad. Nos enfocamos en entrenamiento inteligente,
+              Coach Energy no es solo un gimnasio — es tu espacio de transformación. Nos enfocamos en entrenamiento inteligente,
               equipamiento moderno y orientación profesional para transformarte en tu versión más fuerte. Ya seas
               principiante o experimentado, tenemos tu respaldo.
             </p>

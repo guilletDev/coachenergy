@@ -17,9 +17,9 @@ export default function ProgramsSection() {
             COACH <span className="text-[#8B5CF6]">ENERGY</span> PROGRAMAS
           </h2>
           <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
-            Descubre una amplia gama de clases diseñadas para desafiar, inspirar y transformarte.
-            Desde entrenamiento de fuerza hasta cardio intenso, Coach Energy ofrece programas completos
-            para alcanzar tus objetivos.
+            Nuestros programas están diseñados para llevarte al siguiente nivel.
+            Ya sea que busques ganar fuerza, mejorar tu movilidad o un entrenamiento personalizado,
+            Coach Energy tiene lo que necesitás.
           </p>
         </div>
 
@@ -48,31 +48,6 @@ export default function ProgramsSection() {
             </div>
           </div>
 
-          {/* HIIT */}
-          <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
-            <div
-              className="h-48 bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url('/images/programs/hiit-branded.png')`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-            </div>
-            <div className="p-6 flex-1 flex flex-col -mt-6 relative z-10">
-              <h3 className="text-xl font-bold mb-2 text-white">HIIT</h3>
-              <p className="text-gray-400 mb-4 flex-1">
-                Entrenamientos de alta intensidad para quemar grasa eficientemente
-              </p>
-              <Button
-                variant="outline"
-                className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
-                onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20HIIT", "_blank")}
-              >
-                Saber Más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
-
           {/* Functional Training */}
           <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
             <div
@@ -92,52 +67,6 @@ export default function ProgramsSection() {
                 variant="outline"
                 className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
                 onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20Entrenamiento%20Funcional", "_blank")}
-              >
-                Saber Más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Cardio Blast */}
-          <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
-            <div
-              className="h-48 bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url('/images/programs/cardio-branded.png')`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-            </div>
-            <div className="p-6 flex-1 flex flex-col -mt-6 relative z-10">
-              <h3 className="text-xl font-bold mb-2 text-white">Cardio Explosivo</h3>
-              <p className="text-gray-400 mb-4 flex-1">Quema calorías y aumenta tu resistencia cardiovascular</p>
-              <Button
-                variant="outline"
-                className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
-                onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20Cardio%20Explosivo", "_blank")}
-              >
-                Saber Más <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Stretch */}
-          <div className="bg-[#1A1A1A] rounded-xl overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col border border-[#2D2D2D] hover:border-[#8B5CF6]/50">
-            <div
-              className="h-48 bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url('/images/programs/stretch-branded.png')`,
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-            </div>
-            <div className="p-6 flex-1 flex flex-col -mt-6 relative z-10">
-              <h3 className="text-xl font-bold mb-2 text-white">Estiramiento</h3>
-              <p className="text-gray-400 mb-4 flex-1">Mejora flexibilidad, postura y bienestar general</p>
-              <Button
-                variant="outline"
-                className="border-2 border-[#8B5CF6] text-white hover:bg-[#8B5CF6] hover:text-white bg-transparent transition-all duration-300 mt-auto"
-                onClick={() => window.open("https://wa.me/5493872131333?text=Hola%20Coach%20Energy,%20quiero%20saber%20m%C3%A1s%20sobre%20Estiramiento", "_blank")}
               >
                 Saber Más <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

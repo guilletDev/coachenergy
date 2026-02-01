@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://coach-energy.vercel.app"),
+  metadataBase: new URL("https://coachenergy.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     title: "Coach Energy - Entrená con Energía, Viví con Fuerza",
     description:
       "Coach Energy - Tu centro de entrenamiento premium. Fuerza, funcional, resistencia. Entrenadores profesionales certificados. ¡Tu mejor versión empieza hoy!",
-    url: "https://coach-energy.vercel.app/",
+    url: "https://coachenergy.vercel.app/",
     siteName: "Coach Energy",
     images: [
       {
-        url: "https://coach-energy.vercel.app/images/og-image.jpg",
+        url: "https://coachenergy.vercel.app/logo-coach-energy.png",
         width: 1024,
         height: 630,
         alt: "Coach Energy - Centro de entrenamiento premium con coaches profesionales",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Coach Energy - Entrená con Energía, Viví con Fuerza",
     description:
       "Coach Energy - Tu centro de entrenamiento premium. Fuerza, funcional, resistencia. Entrenadores profesionales certificados.",
-    images: ["https://coach-energy.vercel.app/images/og-image.jpg"],
+    images: ["https://coachenergy.vercel.app/logo-coach-energy.png"],
     creator: "@coachenergy",
   },
   robots: {

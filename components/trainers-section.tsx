@@ -82,7 +82,7 @@ export default function TrainersSection() {
         {/* Motivational Text */}
         <div className="mt-12 text-center">
           <p className="text-gray-400 text-lg">
-            <span className="text-[#FACC15] font-semibold">&quot;Más que un gimnasio, una comunidad.&quot;</span>
+            <span className="text-[#FACC15] font-semibold">&quot;Tu energía, nuestra pasión.&quot;</span>
           </p>
         </div>
       </div>

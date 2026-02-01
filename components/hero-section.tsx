@@ -16,7 +16,7 @@ export default function HeroSection() {
       id="hero"
       className="relative h-screen flex items-center justify-center bg-cover bg-center animate-fade-in-slow"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(10, 10, 10, 0.85) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(10, 10, 10, 0.9) 100%), url('/images/programs/zona-musculacion.webp')`,
+        background: `linear-gradient(135deg, #0A0A0A 0%, rgba(139, 92, 246, 0.08) 50%, #0A0A0A 100%)`,
         marginTop: "-80px",
         paddingTop: "80px",
       }}
