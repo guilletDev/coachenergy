@@ -11,10 +11,12 @@ import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 import FloatingButtons from "@/components/floating-buttons"
 import ScrollAnimations from "@/components/scroll-animations"
+import ScrollToTop from "@/components/scroll-to-top"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white overflow-x-hidden">
+      <ScrollToTop />
       <ScrollAnimations />
       <Navbar />
       <HeroSection />

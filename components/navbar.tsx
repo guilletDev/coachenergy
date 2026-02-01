@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Zap, Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import { scrollToSection } from "@/lib/scroll-utils"
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("")
@@ -13,7 +14,8 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["hero", "about", "programs", "trainers", "facilities", "membership", "schedule", "testimonials", "contact"]
-      const scrollPosition = window.scrollY + 100
+      // Offset for active section detection should match the scroll offset loosely
+      const scrollPosition = window.scrollY + 90
 
       setIsScrolled(window.scrollY > 10)
 
@@ -35,11 +37,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
+  const handleNavClick = (sectionId: string) => {
+    scrollToSection(sectionId)
     setIsMobileMenuOpen(false)
   }
 
@@ -59,7 +58,7 @@ export default function Navbar() {
           }`}
         style={{ position: "fixed", top: 0, left: 0, right: 0 }}
       >
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick("hero")}>
           <Image
             src="/logo-coach-energy.png"
             alt="Coach Energy"
@@ -77,7 +76,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => handleNavClick(item.id)}
               className={`relative font-medium transition-all duration-300 group ${activeSection === item.id ? "text-[#8B5CF6]" : (!isScrolled ? "text-[#FACC15] hover:text-white" : "text-white hover:text-[#8B5CF6]")
                 }`}
             >
@@ -89,7 +88,7 @@ export default function Navbar() {
 
         {/* Desktop Contact Button */}
         <Button
-          onClick={() => scrollToSection("contact")}
+          onClick={() => handleNavClick("contact")}
           className="hidden md:flex items-center gap-2 bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold px-6 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8B5CF6]/25"
         >
           <Zap className="w-4 h-4" />
@@ -138,7 +137,7 @@ export default function Navbar() {
           {navItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => handleNavClick(item.id)}
               className={`text-left py-4 text-lg border-b border-[#2D2D2D] transition-colors duration-300 ${activeSection === item.id ? "text-[#8B5CF6]" : "text-white hover:text-[#8B5CF6]"
                 }`}
             >
@@ -146,7 +145,7 @@ export default function Navbar() {
             </button>
           ))}
           <Button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => handleNavClick("contact")}
             className="mt-6 bg-[#FACC15] hover:bg-[#FDE047] text-black font-bold py-3 transition-all duration-300"
           >
             <Zap className="w-4 h-4 mr-2" />

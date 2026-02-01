@@ -2,15 +2,9 @@
 
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { scrollToSection } from "@/lib/scroll-utils"
 
 export default function HeroSection() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <section
       id="hero"
@@ -54,7 +48,7 @@ export default function HeroSection() {
           className="bg-[#FACC15] hover:bg-[#FDE047] text-black text-base md:text-lg px-10 py-6 md:px-12 md:py-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)] font-bold opacity-0 animate-fade-in-slow uppercase tracking-wider"
           style={{ animationDelay: "1.5s" }}
         >
-          Unete ahora
+          Únete ahora
         </Button>
       </div>
 

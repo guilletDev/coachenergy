@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
   ]
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A2E] to-[#0A0A0A]">
+    <section className="pt-12 pb-20 px-6 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A2E] to-[#0A0A0A]">
       <div className="max-w-7xl mx-auto">
         {/* Header - Mobile Optimized */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-16 gap-8">

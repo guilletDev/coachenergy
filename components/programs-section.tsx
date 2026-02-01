@@ -25,7 +25,7 @@ export default function ProgramsSection() {
   ]
 
   return (
-    <section id="programs" className="py-20 px-6 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] animate-fade-in-up">
+    <section id="programs" className="pt-12 pb-20 px-6 bg-gradient-to-b from-[#0A0A0A] via-[#1A1A1A] to-[#0A0A0A] animate-fade-in-up">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">

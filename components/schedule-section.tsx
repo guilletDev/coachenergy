@@ -20,7 +20,7 @@ const scheduleData = [
 
 export default function ScheduleSection() {
     return (
-        <section id="schedule" className="py-20 px-6 bg-[#0A0A0A]">
+        <section id="schedule" className="pt-12 pb-20 px-6 bg-[#0A0A0A]">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
                     <div className="flex items-center justify-center gap-2 mb-4">

@@ -55,7 +55,7 @@ export default function FacilitiesSection() {
   ]
 
   return (
-    <section id="facilities" className="py-20 px-6 bg-gradient-to-b from-[#0A0A0A] to-[#1A1A2E]">
+    <section id="facilities" className="pt-12 pb-20 px-6 bg-gradient-to-b from-[#0A0A0A] to-[#1A1A2E]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16 gap-6">
           <div>

@@ -2,10 +2,11 @@
 
 import { Button } from "@/components/ui/button"
 import { Users, Award, Clock, Zap } from "lucide-react"
+import { scrollToSection } from "@/lib/scroll-utils"
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-20 px-6 bg-[#0A0A0A]">
+    <section className="pt-12 pb-20 px-6 bg-[#0A0A0A]">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Images */}
@@ -100,12 +101,7 @@ export default function WhyChooseSection() {
             </div>
 
             <Button
-              onClick={() => {
-                const element = document.getElementById("facilities")
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" })
-                }
-              }}
+              onClick={() => scrollToSection("facilities")}
               className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold px-8 py-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8B5CF6]/25">
               <Zap className="w-4 h-4 mr-2" />
               Ver Instalaciones

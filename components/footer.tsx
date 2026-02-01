@@ -2,15 +2,9 @@
 
 import { Zap, Instagram, Facebook } from "lucide-react"
 import Image from "next/image"
+import { scrollToSection } from "@/lib/scroll-utils"
 
 export default function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <footer className="bg-[#0A0A0A] py-16 px-6 border-t border-[#8B5CF6]/20">
       <div className="max-w-7xl mx-auto">

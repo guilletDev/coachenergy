@@ -29,7 +29,7 @@ const trainers = [
 
 export default function TrainersSection() {
   return (
-    <section id="trainers" className="py-20 px-6 bg-[#0A0A0A] animate-fade-in-up">
+    <section id="trainers" className="pt-12 pb-20 px-6 bg-[#0A0A0A] animate-fade-in-up">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
