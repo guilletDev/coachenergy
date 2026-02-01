@@ -28,7 +28,7 @@ export default function ScheduleSection() {
                         <p className="text-[#FACC15] text-sm font-semibold tracking-wider">HORARIOS</p>
                         <Clock className="w-5 h-5 text-[#FACC15]" />
                     </div>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white uppercase italic">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white uppercase">
                         NUESTROS <span className="text-[#8B5CF6]">HORARIOS</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
@@ -52,10 +52,10 @@ export default function ScheduleSection() {
                             <h3 className="text-xl font-bold text-white mb-3">{schedule.day}</h3>
 
                             {/* Hours */}
-                            <div className="flex items-center justify-center gap-2">
-                                <Zap className="w-4 h-4 text-[#FACC15]" />
-                                <span className="text-2xl font-bold text-[#FACC15]">{schedule.hours}</span>
-                                <Zap className="w-4 h-4 text-[#FACC15]" />
+                            <div className="flex items-center justify-center gap-2 flex-nowrap">
+                                <Zap className="w-4 h-4 text-[#FACC15] shrink-0" />
+                                <span className="text-xl sm:text-2xl font-bold text-[#FACC15] whitespace-nowrap">{schedule.hours}</span>
+                                <Zap className="w-4 h-4 text-[#FACC15] shrink-0" />
                             </div>
                         </div>
                     ))}

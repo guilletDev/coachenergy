@@ -160,9 +160,20 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-[#2D2D2D] pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-[#2D2D2D] pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <p className="text-gray-400 text-sm md:text-base">
             © 2026 <span className="text-[#8B5CF6]">Coach Energy</span>. Todos los derechos reservados.
+          </p>
+          <p className="text-gray-500 text-sm md:text-base">
+            Desarrollado By{" "}
+            <a
+              href="https://www.xora.com.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8B5CF6] hover:text-[#FACC15] transition-colors duration-200 font-medium"
+            >
+              XORA WEB
+            </a>
           </p>
         </div>
       </div>
